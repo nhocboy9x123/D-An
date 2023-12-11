@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -25,12 +25,9 @@
     <!-- Libraries Stylesheet -->
     <link href="resources/lib/animate/animate.min.css" rel="stylesheet">
     <link href="resources/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     
+    <!-- Template Stylesheet -->
+    @vite('resources/js/app.js')
 </head>
 
 <body>
