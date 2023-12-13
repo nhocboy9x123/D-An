@@ -1,11 +1,5 @@
 import './bootstrap';
-import '../assets/css/bootstrap.css';
 import '../assets/css/font-awesome.css';
 import '../assets/js/morris/morris-0.4.3.min.css';
 import '../assets/css/custom-styles.css';
-import '../assets/js/jquery-1.10.2.js';
-import '../assets/js/bootstrap.min.js';
-import '../assets/js/jquery.metisMenu.js';
-import '../assets/js/morris/raphael-2.1.0.min.js';
-import '../assets/js/morris/morris.js';
-import '../assets/js/custom-scripts.js';
+import '../assets/css/bootstrap.css';
