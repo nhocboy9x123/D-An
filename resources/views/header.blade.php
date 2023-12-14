@@ -234,13 +234,10 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i>Home</a>
+                        <a  href="index.html"><i class="fa fa-dashboard"></i>Home</a>
                     </li>
                     <li>
                         <a href="/customer"><i class="fa fa-desktop"></i>Khách hàng</a>
-                    </li>
-					<li>
-                        <a href="/admin-product"><i class="fa fa-bar-chart-o"></i>Quản lý sản phẩm</a>
                     </li>
                     <li>
                         <a href="/buildings"><i class="fa fa-home"></i>Quản lý tòa nhà</a>
@@ -255,7 +252,7 @@
                         <a href="/macs"><i class="fa fa-home"></i>Quản lý thông tin macs</a>
                     </li>
                     <li>
-                        <a href="/orderdetail"><i class="fa fa-home"></i>chi tiết hóa đơn</a>
+                        <a href="/orderdetail"><i class="fa fa-"></i>chi tiết hóa đơn</a>
                     </li>
                 </ul>
 
