@@ -26,6 +26,11 @@ Route::post('/login',function(){
     if(Auth::check()){}
     return view('home');
 });
-Route::get('buildings',function(){
-    return view('buildings');
-});
+use App\Http\Controllers\BuildingsController;
+Route::get('/buildings', [BuildingsController::class, 'index'])->name('buildings.index');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+use App\Http\Controllers\UsersController;
+ 
+Route::get('/users', [UsersController::class, 'index'])->name('users.index');
