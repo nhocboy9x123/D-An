@@ -241,7 +241,9 @@
                     </li>
 					<li>
                         <a href="/admin-product"><i class="fa fa-bar-chart-o"></i>Quản lý sản phẩm</a>
-                         
+                    </li>
+                    <li>
+                        <a href="/buildings"><i class="fa fa-home"></i>Quản lý tòa nhà</a>
                     </li>
                     
                 </ul>
