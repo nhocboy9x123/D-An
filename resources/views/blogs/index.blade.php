@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layout')
  
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header">Manage building</div>
+            <div class="card-header">Manage Blogs</div>
             <div class="card-body">
                 {{ $dataTable->table() }}
             </div>

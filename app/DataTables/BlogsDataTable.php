@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Building;
+use App\Models\Blog;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class BuildingsDataTable extends DataTable
+class BlogsDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -21,13 +21,15 @@ class BuildingsDataTable extends DataTable
      */
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
-        return (new EloquentDataTable($query))->setRowId('id');
+        return (new EloquentDataTable($query))
+            ->addColumn('action', 'blogs.action')
+            ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Building $model): QueryBuilder
+    public function query(Blog $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -38,7 +40,7 @@ class BuildingsDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('buildings-table')
+                    ->setTableId('blogs-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -60,15 +62,13 @@ class BuildingsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            column::computed('action')
-                ->exportable(false)
-                ->printable(false)
-                ->width(60)
-                ->addClass('text-center'),
+            Column::computed('action')
+                  ->exportable(false)
+                  ->printable(false)
+                  ->width(60)
+                  ->addClass('text-center'),
             Column::make('id'),
-            Column::make('name'),
-            Column::make('hotelId'),
-            Column::make('code'),
+            Column::make('blogname'),
         ];
     }
 
@@ -77,6 +77,6 @@ class BuildingsDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Buildings_' . date('YmdHis');
+        return 'Blogs_' . date('YmdHis');
     }
 }

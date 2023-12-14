@@ -17,6 +17,38 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <li>
+                    <a  href="index.html"><i class="fa fa-dashboard"></i>Home</a>
+                </li>
+                <li>
+                    <a href="/customer"><i class="fa fa-desktop"></i>Khách hàng</a>
+                </li>
+                <li>
+                    <a href="/buildings"><i class="fa fa-home"></i>Quản lý tòa nhà</a>
+                </li>
+                <li>
+                    <a href="/category"><i class="fa fa-home"></i>Quản lý thông tin sản phẩm</a>
+                </li>
+                <li>
+                    <a href="/agencies"><i class="fa fa-home"></i>Quản lý thông tin agencies</a>
+                </li>
+                <li>
+                    <a href="/macs"><i class="fa fa-home"></i>Quản lý thông tin macs</a>
+                </li>
+                <li>
+                    <a href="/orderdetail"><i class="fa fa-"></i>chi tiết hóa đơn</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper">
+        <div id="page-inner">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -32,7 +64,7 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
-
+                    
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -76,5 +108,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
 </body>
 </html>
