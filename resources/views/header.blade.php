@@ -241,9 +241,22 @@
                     </li>
 					<li>
                         <a href="/admin-product"><i class="fa fa-bar-chart-o"></i>Quản lý sản phẩm</a>
-                         
                     </li>
-                    
+                    <li>
+                        <a href="/buildings"><i class="fa fa-home"></i>Quản lý tòa nhà</a>
+                    </li>
+                    <li>
+                        <a href="/category"><i class="fa fa-home"></i>Quản lý thông tin sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="/agencies"><i class="fa fa-home"></i>Quản lý thông tin agencies</a>
+                    </li>
+                    <li>
+                        <a href="/macs"><i class="fa fa-home"></i>Quản lý thông tin macs</a>
+                    </li>
+                    <li>
+                        <a href="/orderdetail"><i class="fa fa-home"></i>chi tiết hóa đơn</a>
+                    </li>
                 </ul>
 
             </div>
