@@ -29,20 +29,3 @@ Route::post('/login',function(){
 Route::get('buildings',function(){
     return view('buildings');
 });
-
-Route::get('customer',function(){
-    return view('customer');
-});
-
-Route::get('category',function(){
-    return view('category');
-});
-Route::get('agencies',function(){
-    return view('agencies');
-});
-Route::get('macs',function(){
-    return view('macs');
-});
-Route::get('orderdetail',function(){
-    return view('orderdetail');
-});
