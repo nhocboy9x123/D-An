@@ -26,9 +26,6 @@ Route::post('/login',function(){
     if(Auth::check()){}
     return view('home');
 });
-Route::get('buildings',function(){
-    return view('buildings');
-});
 Route::get('/customer',function(){
     return view('customer');
 });
@@ -52,3 +49,7 @@ use App\Http\Controllers\BlogsController;
  
 use App\Http\Controllers\BuildingsController;
 Route::get('/buildings', [BuildingsController::class, 'index']);
+use App\Http\Controllers\BannersController;
+Route::get('/banners', [BannersController::class, 'index']);
+use App\Http\Controllers\OrderdetailsController;
+Route::get('/orderdetails', [OrderdetailsController::class, 'index']);
