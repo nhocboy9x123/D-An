@@ -60,11 +60,6 @@ class BuildingsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            column::computed('action')
-                ->exportable(false)
-                ->printable(false)
-                ->width(60)
-                ->addClass('text-center'),
             Column::make('id'),
             Column::make('name'),
             Column::make('hotelId'),

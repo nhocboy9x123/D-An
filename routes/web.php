@@ -50,6 +50,5 @@ Route::get('/agencies',function(){
 
 use App\Http\Controllers\BlogsController;
  
-Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index');
 use App\Http\Controllers\BuildingsController;
 Route::get('/buildings', [BuildingsController::class, 'index']);
