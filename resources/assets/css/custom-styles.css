@@ -40,6 +40,7 @@ body {
 
 h1, .h1, h2, .h2, h3, .h3 {
 margin-top: -5px;
+margin-left: -5px;
 margin-bottom: -5px;
 }
 h2 {
@@ -328,10 +329,10 @@ padding-top: 4px;
 	
 }
 .sidebar-collapse > .nav > li > a {
-	padding:15px 10px;
+	padding:20px 15px;
 }
 .sidebar-collapse > .nav > li {
-	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+	border-bottom: 2px solid rgba(107, 108, 109, 0.19);
 }
 ul.nav.nav-second-level.collapse.in {
 background: #172D44;

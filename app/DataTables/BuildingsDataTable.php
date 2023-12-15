@@ -64,6 +64,7 @@ class BuildingsDataTable extends DataTable
             Column::make('name'),
             Column::make('hotelId'),
             Column::make('code'),
+           
         ];
     }
 
