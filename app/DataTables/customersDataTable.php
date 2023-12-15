@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\customer;
+use App\Models\Customer;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class customersDataTable extends DataTable
+class CustomersDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -21,15 +21,13 @@ class customersDataTable extends DataTable
      */
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
-        return (new EloquentDataTable($query))
-            ->addColumn('action', 'customers.action')
-            ->setRowId('id');
+        return (new EloquentDataTable($query))->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(customer $model): QueryBuilder
+    public function query(Customer $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -40,7 +38,7 @@ class customersDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('customers-table')
+                    ->setTableId('Customers-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -112,6 +110,6 @@ class customersDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'customers_' . date('YmdHis');
+        return 'Customers_' . date('YmdHis');
     }
 }

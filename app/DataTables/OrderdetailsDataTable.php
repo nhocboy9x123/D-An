@@ -38,7 +38,7 @@ class OrderdetailsDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('banners-table')
+                    ->setTableId('orderdetails-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
