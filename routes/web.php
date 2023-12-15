@@ -31,31 +31,11 @@ Route::post('/login',function(){
     if(Auth::check()){}
     return view('home');
 });
-Route::get('buildings',function(){
-    return view('buildings');
-});
-Route::get('/customer',function(){
-    return view('customer');
-});
-Route::get('/macs',function(){
-    return view('macs');
-});
-Route::get('/orderdetail',function(){
-    return view('orderdetail');
-});
-Route::get('/category',function(){
-    return view('category');
-});
-Route::get('/Main',function(){
-    return view('Main');
-});
-Route::get('/agencies',function(){
-    return view('agencies');
-});
 
- 
-use App\Http\Controllers\BuildingsController;
 Route::get('/buildings', [BuildingsController::class, 'index']);
 
-use App\Http\Controllers\customersController;
 Route::get('/customers', [customersController::class, 'index']);
+
+Route::get('/orderdetails', [OrderdetailsController::class,'index']);
+
+Route::get('/banners', [BannersController::class,'index']);
