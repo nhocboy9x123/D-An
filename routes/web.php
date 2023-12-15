@@ -45,11 +45,6 @@ Route::get('/agencies',function(){
     return view('agencies');
 });
 
-use App\Http\Controllers\BlogsController;
  
 use App\Http\Controllers\BuildingsController;
 Route::get('/buildings', [BuildingsController::class, 'index']);
-use App\Http\Controllers\BannersController;
-Route::get('/banners', [BannersController::class, 'index']);
-use App\Http\Controllers\OrderdetailsController;
-Route::get('/orderdetails', [OrderdetailsController::class, 'index']);
