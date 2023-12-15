@@ -26,12 +26,6 @@ Route::post('/login',function(){
     if(Auth::check()){}
     return view('home');
 });
-Route::get('buildings',function(){
-    return view('buildings');
-});
-Route::get('/customer',function(){
-    return view('customer');
-});
 Route::get('/macs',function(){
     return view('macs');
 });

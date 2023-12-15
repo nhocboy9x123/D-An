@@ -77,7 +77,7 @@
                         <ul class="nav" id="main-menu">
 
                             <li>
-                                <a href="/customer"><i class="fa fa-user-circle" aria-hidden="true"></i>Quản lí khách hàng</a>
+                                <a href="/customers"><i class="fa fa-user-circle" aria-hidden="true"></i>Quản lí khách hàng</a>
                             </li>
                             <li>
                                 <a href="/buildings"><i class="fa fa-home"></i>Quản lý tòa nhà</a>
