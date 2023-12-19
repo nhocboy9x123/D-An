@@ -23,4 +23,5 @@ class Building extends Authenticatable
         'hotelId',
         'code'
     ];
+    public $timestamps = false;
 }
