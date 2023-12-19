@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\customersController;
+use App\Http\Controllers\BuildingsController;
+use App\Http\Controllers\BannersController;
+use App\Http\Controllers\OrderdetailsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +30,12 @@ Route::post('/login',function(){
     if(Auth::check()){}
     return view('home');
 });
+Route::get('buildings',function(){
+    return view('buildings');
+});
+Route::get('/customer',function(){
+    return view('customer');
+});
 Route::get('/macs',function(){
     return view('macs');
 });
@@ -46,5 +56,8 @@ Route::get('/agencies',function(){
 use App\Http\Controllers\BuildingsController;
 Route::get('/buildings', [BuildingsController::class, 'index']);
 
-use App\Http\Controllers\customersController;
-Route::get('/customers', [customersController::class, 'index']);
+Route::get('buildings/create', [BuildingsController::class,'create']); 
+Route::post('buildings/store', [BuildingsController::class,'store'])->name("building.create");
+Route::put('/buildings/update/{id}', [BuildingsController::class,'update'])->name('building.update');
+Route::get('buildings/edit/{id}', [BuildingsController::class,'edit']);
+Route::DELETE('/buildings/delete/{id}', [BuildingsController::class,'destroy']);

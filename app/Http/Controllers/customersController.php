@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\customersDataTable;
+use App\DataTables\CustomersDataTable;
 
-class customersController extends Controller
+class CustomersController extends Controller
 {
     public function index(customersDataTable $dataTable)
     {

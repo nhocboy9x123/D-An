@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Building extends Authenticatable
+class Banner extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -19,9 +19,12 @@ class Building extends Authenticatable
      */
     protected $fillable = [
         'id',
-        'name',
-        'hotelId',
-        'code'
+        'title',
+        'path',
+        'sortOrder',
+        'status',
+        'type',
+        'datas',
+        'cateid'
     ];
-    public $timestamps = false;
 }

@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Customer;
+use App\Models\Orderdetail;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class CustomersDataTable extends DataTable
+class OrderdetailsDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -27,7 +27,7 @@ class CustomersDataTable extends DataTable
     /**
      * Get the query source of dataTable.
      */
-    public function query(Customer $model): QueryBuilder
+    public function query(Orderdetail $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -38,7 +38,7 @@ class CustomersDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('Customers-table')
+                    ->setTableId('orderdetails-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -61,47 +61,15 @@ class CustomersDataTable extends DataTable
     {
         return [
             Column::make('id'),
+            Column::make('orderId'),
             Column::make('code'),
-            Column::make('fullname'),
-            Column::make('email'),
-            Column::make('password'),
-            Column::make('username'),
-            Column::make('neolock_username'),
-            Column::make('phone'),
-            Column::make('address'),
-            Column::make('country'),
-            Column::make('district'),
-            Column::make('city'),
+            Column::make('shopId'),
             Column::make('status'),
-            Column::make('create_date'),
-            Column::make('avatar'),
-            Column::make('token'),
-            Column::make('point'),
-            Column::make('webcloud_enable'),
-            Column::make('security_key'),
-            Column::make('fcm'),
-            Column::make('social_id'),
-            Column::make('last_login'),
-            Column::make('accsess_token'),
-            Column::make('refresh_token'),
-            Column::make('open_id'),
-            Column::make('scope'),
-            Column::make('expires_in'),
-            Column::make('indentification_number'),
-            Column::make('indentification_img_1'),
-            Column::make('indentification_img_2'),
-            Column::make('balance'),
-            Column::make('receiveFcm'),
-            Column::make('roles'),
-            Column::make('emailVerify'),
-            Column::make('mobileVerify'),
-            Column::make('remark'),
-            Column::make('is_deleted'),
-            Column::make('commission'),
-            Column::make('parent'),
-            Column::make('CCCD'),
-            Column::make('product_type'),
-            Column::make('is_receive_email'),
+            Column::make('createdDate'),
+            Column::make('quantity'),
+            Column::make('price'),
+            Column::make('description'),
+            Column::make('macAddress'),
         ];
     }
 
@@ -110,6 +78,6 @@ class CustomersDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Customers_' . date('YmdHis');
+        return 'Orderdetails_' . date('YmdHis');
     }
 }

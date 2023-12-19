@@ -92,7 +92,10 @@
                                 <a href="/macs"><i class="fa fa-home"></i>Quản lý thông tin macs</a>
                             </li>
                             <li>
-                                <a href="/orderdetail"><i class="fa fa-sticky-note"></i>Chi tiết hóa đơn</a>
+                                <a href="/orderdetails"><i class="fa fa-sticky-note"></i>Chi tiết hóa đơn</a>
+                            </li>
+                            <li>
+                                <a href="/banners"><i class="fa fa-file-image-o"></i>Quản lý Banner</a>
                             </li>
                         </ul>
         
