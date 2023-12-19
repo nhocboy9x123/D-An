@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class CustomersController extends Controller
 {
-    public function index(customersDataTable $dataTable)
+    public function index(customersDataTable $dataTable, Request $request)
     {
-        $customers = DB::table('customers')->select('*');
-        $customers = $customers->get();
+        $customers = DB::table('customers')->paginate(10);
 
         $pageName = 'Tên Trang - News';
-
-        return view('/customers.index', compact('customers', 'pageName'));
+        return view('/customers.index', compact('customers', 'pageName'),[
+            '/customers' => $customers
+        ]);
     }
     public function show($id)
     {

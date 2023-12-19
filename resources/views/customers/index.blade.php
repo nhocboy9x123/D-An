@@ -39,6 +39,9 @@
             </table>
         </div>
     </div>
+    <center><nav aria-label="Page navigation example">
+        {{ $customers->links() }}
+        </center>
 </div>
 @endsection
  
