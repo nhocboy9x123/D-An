@@ -29,4 +29,5 @@ class Orderdetail extends Authenticatable
         'description',
         'macAddress'
     ];
+    public $timestamps = false;
 }

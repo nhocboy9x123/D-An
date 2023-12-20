@@ -53,11 +53,18 @@ Route::get('/agencies',function(){
 });
 
  
-use App\Http\Controllers\BuildingsController;
+//buildings
 Route::get('/buildings', [BuildingsController::class, 'index']);
-
 Route::get('buildings/create', [BuildingsController::class,'create']); 
 Route::post('buildings/store', [BuildingsController::class,'store'])->name("building.create");
 Route::put('/buildings/update/{id}', [BuildingsController::class,'update'])->name('building.update');
 Route::get('buildings/edit/{id}', [BuildingsController::class,'edit']);
 Route::DELETE('/buildings/delete/{id}', [BuildingsController::class,'destroy']);
+
+//Orderdetails
+Route::get('/orderdetails', [OrderdetailsController::class, 'index']);
+Route::get('orderdetails/create', [OrderdetailsController::class,'create']); 
+Route::post('orderdetails/store', [OrderdetailsController::class,'store'])->name("orderdetail.create");
+Route::put('/orderdetails/update/{id}', [OrderdetailsController::class,'update'])->name('orderdetail.update');
+Route::get('orderdetails/edit/{id}', [OrderdetailsController::class,'edit']);
+Route::DELETE('/orderdetails/delete/{id}', [OrderdetailsController::class,'destroy']);

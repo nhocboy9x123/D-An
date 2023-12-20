@@ -39,6 +39,9 @@
                 </table>
             </div>
         </div>
+        <center><nav aria-label="Page navigation example">
+            {{ $buildings->links() }}
+</center>
     </div>
 @endsection
  
